@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swift Software</title>
+    <link rel="icon" href="logo.png" type="image/png">
+    <style>
+        :root {
+            --orange: #fbff00;
+            --black: #000000;
+            --white: #ffffff;
+            --dark-gray: #111111;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--black);
+            color: var(--white);
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: var(--black);
+            padding: 30px 0;
+            text-align: center;
+            border-bottom: 1px solid var(--orange);
+        }
+        
+        .logo {
+            height: 80px;
+            transition: transform 0.3s ease;
+        }
+        
+        .logo:hover {
+            transform: scale(1.05);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+            color: var(--orange);
+            margin: 40px 0;
+            font-size: 2.5em;
+        }
+        
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .product-card {
+            background-color: var(--dark-gray);
+            border-radius: 8px;
+            width: 300px;
+            padding: 25px;
+            box-shadow: 0 4px 8px rgba(255, 140, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #333;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(255, 140, 0, 0.2);
+            border-color: var(--orange);
+        }
+        
+        .product-name {
+            color: var(--orange);
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .product-info {
+            color: var(--white);
+            height: 0;
+            overflow: hidden;
+            transition: height 0.4s ease;
+        }
+        
+        .product-card:hover .product-info {
+            height: auto;
+        }
+        
+        .highlight {
+            color: var(--orange);
+            font-weight: bold;
+        }
+        
+        .btn {
+            display: block;
+            background-color: transparent;
+            color: var(--orange);
+            text-align: center;
+            padding: 12px;
+            margin-top: 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            border: 2px solid var(--orange);
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: var(--orange);
+            color: var(--black);
+        }
+        
+        footer {
+            background-color: var(--black);
+            text-align: center;
+            padding: 30px;
+            margin-top: 80px;
+            border-top: 1px solid var(--orange);
+            font-size: 0.9em;
+            color: #aaa;
+        }
+        
+        @media (max-width: 768px) {
+            .products {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .product-card {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Swift Software Logo" class="logo">
+    </header>
+    
+    <div class="container">
+        <h1>Наши <span class="highlight">продукты</span></h1>
+        
+        <div class="products">
+            <div class="product-card">
+                <h2 class="product-name">Swift Archive</h2>
+                <div class="product-info">
+                    <p><span class="highlight">Swift Archive</span> - это инструмент для безопасной архивации файлов.</p>
+                    <p><span class="highlight">Ключевые особенности:</span></p>
+                    <ul>
+                        <li>Автоматическое стерание<span class="highlight"> метаданных</span> без оставления следов</li>
+                        <li><span class="highlight">Пароли</span> для архивов</li>
+                        <li><span class="highlight">Быстрая</span> обработка файлов</li>
+                        <li><span class="highlight">Простота</span> использования и <span class="highlight"> понятный</span> интерфейс</li>
+                    </ul>
+                </div>
+                <a href="https://github.com/Sozidarov/swiftarchive" class="btn">Узнать больше</a>
+            </div>
+            
+            <div class="product-card">
+                <h2 class="product-name">Swift WSL</h2>
+                <div class="product-info">
+                    <p><span class="highlight">Swift WSL</span> -  упрощенная альтернатива WSL (Windows Subsystem for Linux) на Python.</p>
+                    <p><span class="highlight">Основные преимущества:</span></p>
+                    <ul>
+                        <li>Малый<span class="highlight"> вес</span> программы</li>
+                        <li>Автоматическая настройка окружения</li>
+                        <li><span class="highlight">Быстрый</span> старт</li>
+                        <li><span class="highlight">Минимальные</span> зависимости - подойдет для <span class="highlight"> слабых</span> пк</li>
+                    </ul>
+                </div>
+                <a href="https://github.com/Sozidarov/swiftwsl" class="btn">Узнать больше</a>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        &copy; 2023 <span class="highlight">Swift Software</span>. Все права защищены.
+    </footer>
+</body>
+</html>
